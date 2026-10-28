@@ -1,7 +1,6 @@
 {
   "name": "@utilitly/pdf-reorder-pages",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.1.0",
   "description": "Reorder the pages of a PDF in JavaScript, in Node.js or the browser. Nothing is uploaded.",
   "keywords": [
     "pdf",
@@ -14,6 +13,11 @@
     "nodejs"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utilitlyPDF/utilitly-pdf.git",
+    "directory": "packages/pdf-reorder-pages"
+  },
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -39,5 +43,8 @@
   },
   "dependencies": {
     "pdf-lib": "^1.17.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

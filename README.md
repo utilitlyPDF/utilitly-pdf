@@ -24,8 +24,6 @@ Nothing here talks to a server. The PDF never leaves the process that handles it
 | [`@utilitly/pdf-reorder-pages`](./packages/pdf-reorder-pages) | Put every page in a new order, e.g. `[3, 1, 2]`. |
 | [`@utilitly/pdf-duplicate-pages`](./packages/pdf-duplicate-pages) | Copy pages, right after the original or at the end, without repeating their images. |
 
-> Work in progress: not published to npm yet. Every package is marked `"private": true` until it is, so it can't be published by accident.
-
 ## Development
 
 Needs Node.js 22.18+ or 24.11+ (`.nvmrc` pins 24).

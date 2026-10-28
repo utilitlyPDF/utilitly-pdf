@@ -1,7 +1,6 @@
 {
   "name": "@utilitly/pdf-split",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.1.0",
   "description": "Split a PDF by page ranges like 1-3, 5, 8-end, in the browser or Node.js. Nothing is uploaded.",
   "keywords": [
     "pdf",
@@ -14,6 +13,11 @@
     "nodejs"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utilitlyPDF/utilitly-pdf.git",
+    "directory": "packages/pdf-split"
+  },
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -39,5 +43,8 @@
   },
   "dependencies": {
     "pdf-lib": "^1.17.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

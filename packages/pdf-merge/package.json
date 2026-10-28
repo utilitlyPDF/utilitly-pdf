@@ -1,7 +1,6 @@
 {
   "name": "@utilitly/pdf-merge",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.1.0",
   "description": "Merge PDF files in JavaScript, in Node.js or the browser. Nothing is uploaded.",
   "keywords": [
     "pdf",
@@ -14,6 +13,11 @@
     "typescript"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utilitlyPDF/utilitly-pdf.git",
+    "directory": "packages/pdf-merge"
+  },
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -39,5 +43,8 @@
   },
   "dependencies": {
     "pdf-lib": "^1.17.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
