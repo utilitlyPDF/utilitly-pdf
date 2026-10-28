@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="260" viewBox="0 0 840 260" role="img" aria-labelledby="title desc">
+<title id="title">@utilitly/pdf-rotate</title>
+<desc id="desc">A page turns clockwise a quarter at a time while the page's /Rotate value reads 0, 90, 180 and 270.</desc>
+<style>
+text { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #e8e8f3; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
+.muted { fill: #9a9bb6; }
+.faint { fill: #5d5e7a; }
+.accent { fill: #9a9bfb; }
+.anim { transform-box: fill-box; transform-origin: center; }
+.turn { transform: rotate(90deg); animation: turn 8s ease-in-out infinite; }
+@keyframes turn { 0%, 14% { transform: rotate(0deg); } 22%, 36% { transform: rotate(90deg); } 44%, 58% { transform: rotate(180deg); } 66%, 80% { transform: rotate(270deg); } 88%, 100% { transform: rotate(360deg); } }
+.r0, .r180, .r270 { opacity: 0; }
+.r0 { animation: r0 8s steps(1, end) infinite; }
+.r90 { animation: r90 8s steps(1, end) infinite; }
+.r180 { animation: r180 8s steps(1, end) infinite; }
+.r270 { animation: r270 8s steps(1, end) infinite; }
+@keyframes r0 { 0% { opacity: 1; } 22% { opacity: 0; } 88% { opacity: 1; } }
+@keyframes r90 { 0% { opacity: 0; } 22% { opacity: 1; } 44% { opacity: 0; } }
+@keyframes r180 { 0% { opacity: 0; } 44% { opacity: 1; } 66% { opacity: 0; } }
+@keyframes r270 { 0% { opacity: 0; } 66% { opacity: 1; } 88% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<rect x="0.5" y="0.5" width="839" height="259" rx="16" fill="#11121b" stroke="#2c2d40"/>
+<circle cx="290" cy="118" r="104" fill="none" stroke="#2c2d40" stroke-width="1.5" stroke-dasharray="3 6"/>
+<path d="M 371 53 A 104 104 0 0 1 394 118" fill="none" stroke="#9a9bfb" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 386 110 L 394 120 L 401 109" fill="none" stroke="#9a9bfb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g class="anim turn"><rect x="230" y="40" width="120" height="156" rx="5" fill="#1d1e2c" stroke="#2c2d40"/><rect x="243" y="53" width="50" height="7" rx="2" fill="#9a9bfb"/><rect x="243" y="71" width="77" height="4" rx="2" fill="#33344a"/><rect x="243" y="82" width="64" height="4" rx="2" fill="#33344a"/><rect x="243" y="93" width="85" height="4" rx="2" fill="#33344a"/><rect x="243" y="104" width="55" height="4" rx="2" fill="#33344a"/><rect x="243" y="115" width="71" height="4" rx="2" fill="#33344a"/><rect x="243" y="126" width="47" height="4" rx="2" fill="#33344a"/><rect x="243" y="137" width="79" height="4" rx="2" fill="#33344a"/><rect x="243" y="148" width="60" height="4" rx="2" fill="#33344a"/></g>
+<text x="470" y="88" font-size="13" class="muted">The page dictionary says</text>
+<text x="470" y="128" font-size="30" class="mono accent r0">/Rotate 0</text>
+<text x="470" y="128" font-size="30" class="mono accent r90">/Rotate 90</text>
+<text x="470" y="128" font-size="30" class="mono accent r180">/Rotate 180</text>
+<text x="470" y="128" font-size="30" class="mono accent r270">/Rotate 270</text>
+<text x="470" y="160" font-size="13" class="muted">Added to each page's own rotation and kept</text>
+<text x="470" y="178" font-size="13" class="muted">within 0-270, so every reader agrees.</text>
+<text x="36" y="238" font-size="14" class="mono">await rotatePdf(pdf, 90)</text><text x="804" y="238" font-size="12.5" text-anchor="end" class="muted">any multiple of 90, any pages</text>
+</svg>

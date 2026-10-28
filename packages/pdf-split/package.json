@@ -1,0 +1,43 @@
+{
+  "name": "@utilitly/pdf-split",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Split a PDF by page ranges like 1-3, 5, 8-end, in the browser or Node.js. Nothing is uploaded.",
+  "keywords": [
+    "pdf",
+    "split",
+    "split-pdf",
+    "extract-pages",
+    "page-range",
+    "pdf-lib",
+    "browser",
+    "nodejs"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsdown -c ../../tsdown.config.ts",
+    "typecheck": "tsc",
+    "lint:package": "publint --strict && attw --pack ."
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  }
+}

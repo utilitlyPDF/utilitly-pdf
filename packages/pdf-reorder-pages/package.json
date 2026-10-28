@@ -1,0 +1,43 @@
+{
+  "name": "@utilitly/pdf-reorder-pages",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Reorder the pages of a PDF in JavaScript, in Node.js or the browser. Nothing is uploaded.",
+  "keywords": [
+    "pdf",
+    "reorder",
+    "reorder-pages",
+    "rearrange",
+    "page-order",
+    "pdf-lib",
+    "browser",
+    "nodejs"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsdown -c ../../tsdown.config.ts",
+    "typecheck": "tsc",
+    "lint:package": "publint --strict && attw --pack ."
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  }
+}

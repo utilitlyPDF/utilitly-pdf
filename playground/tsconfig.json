@@ -1,0 +1,9 @@
+{
+  // The playground runs in a browser, so unlike the engines it gets DOM types.
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["vite/client"]
+  },
+  "include": ["main.ts"]
+}

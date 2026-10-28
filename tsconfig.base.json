@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    // No DOM and no Node types: engine code that reaches for `document`,
+    // `Buffer` or `fs` fails the typecheck, because it would break in the
+    // other runtime.
+    "lib": ["ES2022"],
+    "types": [],
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  }
+}

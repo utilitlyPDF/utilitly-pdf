@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Utilitly PDF engines · playground</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <h1>Utilitly PDF engines</h1>
+      <p>
+        Try each package on your own files. Everything runs in this tab: open DevTools, go to
+        <b>Network</b>, and you'll only see this page's own scripts loading from localhost. Your files
+        are never sent anywhere.
+      </p>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="Tools">
+      <button role="tab" data-tab="merge" aria-selected="true">Merge</button>
+      <button role="tab" data-tab="split">Split</button>
+      <button role="tab" data-tab="rotate">Rotate</button>
+      <button role="tab" data-tab="delete">Delete pages</button>
+      <button role="tab" data-tab="reorder">Reorder pages</button>
+      <button role="tab" data-tab="duplicate">Duplicate pages</button>
+    </nav>
+
+    <main>
+      <form class="tool" data-tool="merge" role="tabpanel">
+        <h2><code>@utilitly/pdf-merge</code></h2>
+        <label>PDFs, in the order to merge them <input name="files" type="file" accept="application/pdf" multiple required /></label>
+        <ol class="file-order" aria-label="Merge order"></ol>
+        <button type="submit">Merge</button>
+      </form>
+
+      <form class="tool" data-tool="split" role="tabpanel" hidden>
+        <h2><code>@utilitly/pdf-split</code></h2>
+        <label>PDF <input name="file" type="file" accept="application/pdf" required /></label>
+        <fieldset>
+          <legend>Output</legend>
+          <label class="inline"><input type="radio" name="mode" value="extract" checked /> One PDF with the selected pages (<code>extractPages</code>)</label>
+          <label class="inline"><input type="radio" name="mode" value="split" /> One PDF per comma-separated part (<code>splitPdf</code>)</label>
+        </fieldset>
+        <label>Pages <input name="pages" type="text" value="1-2, 4, 6-end" required /></label>
+        <button type="submit">Split</button>
+      </form>
+
+      <form class="tool" data-tool="rotate" role="tabpanel" hidden>
+        <h2><code>@utilitly/pdf-rotate</code></h2>
+        <label>PDF <input name="file" type="file" accept="application/pdf" required /></label>
+        <label>Angle
+          <select name="angle"><option value="90">90° clockwise</option><option value="180">180°</option><option value="-90">90° counter-clockwise</option></select>
+        </label>
+        <label>Pages (empty for all) <input name="pages" type="text" placeholder="e.g. 1, 3-end" /></label>
+        <button type="submit">Rotate</button>
+      </form>
+
+      <form class="tool" data-tool="delete" role="tabpanel" hidden>
+        <h2><code>@utilitly/pdf-delete-pages</code></h2>
+        <label>PDF <input name="file" type="file" accept="application/pdf" required /></label>
+        <label>Pages to delete <input name="pages" type="text" value="2" required /></label>
+        <button type="submit">Delete pages</button>
+      </form>
+
+      <form class="tool" data-tool="reorder" role="tabpanel" hidden>
+        <h2><code>@utilitly/pdf-reorder-pages</code></h2>
+        <label>PDF <input name="file" type="file" accept="application/pdf" required /></label>
+        <label>New order, listing every page once <input name="order" type="text" placeholder="e.g. 3, 1, 2" required /></label>
+        <button type="submit">Reorder pages</button>
+      </form>
+
+      <form class="tool" data-tool="duplicate" role="tabpanel" hidden>
+        <h2><code>@utilitly/pdf-duplicate-pages</code></h2>
+        <label>PDF <input name="file" type="file" accept="application/pdf" required /></label>
+        <div class="row">
+          <label>Pages to copy <input name="pages" type="text" value="1" required /></label>
+          <label>Copies of each <input name="copies" type="number" min="1" value="1" /></label>
+        </div>
+        <fieldset>
+          <legend>Where the copies go</legend>
+          <label class="inline"><input type="radio" name="placement" value="after" checked /> Right after each page</label>
+          <label class="inline"><input type="radio" name="placement" value="end" /> At the end</label>
+        </fieldset>
+        <button type="submit">Duplicate pages</button>
+      </form>
+
+      <section class="output" aria-live="polite">
+        <p class="status">Pick a tool, choose a file, and run it.</p>
+        <div class="results"></div>
+      </section>
+    </main>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

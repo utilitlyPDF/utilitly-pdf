@@ -1,0 +1,9 @@
+{
+  // Tests and config files run in Node, so they get Node types.
+  // Engine code is checked separately by each package's tsconfig.
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "include": ["*.config.ts", "internal/**/*.test.ts", "internal/testing.ts", "packages/*/src/**/*.test.ts"]
+}

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="232" viewBox="0 0 840 232" role="img" aria-labelledby="title desc">
+<title id="title">@utilitly/pdf-merge: the Network panel stays empty</title>
+<desc id="desc">While the app is merging 3 files, the browser's Network panel stays empty: 0 requests, 0 bytes transferred.</desc>
+<style>
+text { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #e8e8f3; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
+.muted { fill: #9a9bb6; }
+.faint { fill: #5d5e7a; }
+.accent { fill: #9a9bfb; }
+.anim { transform-box: fill-box; transform-origin: center; }
+.fill { transform-box: fill-box; transform-origin: left center; animation: fill 5s ease-in-out infinite; }
+.done { animation: done 5s ease-in-out infinite; }
+.rec { animation: rec 1.2s ease-in-out infinite; }
+@keyframes fill { 0%, 8% { transform: scaleX(0); } 78%, 96% { transform: scaleX(1); } 100% { transform: scaleX(0); } }
+@keyframes done { 0%, 78% { opacity: 0; } 84%, 96% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes rec { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<rect x="0.5" y="0.5" width="839" height="231" rx="16" fill="#11121b" stroke="#2c2d40"/>
+<rect x="24" y="24" width="264" height="184" rx="10" fill="#181926" stroke="#2c2d40"/>
+<text x="42" y="50" font-size="12" class="muted">your app</text>
+<rect x="42" y="64" width="228" height="34" rx="7" fill="#11121b" stroke="#2c2d40"/>
+<rect x="52" y="73" width="26" height="16" rx="3" fill="#ff6b6f"/><text x="65" y="85" text-anchor="middle" font-size="9" font-weight="700" style="fill:#ffffff">PDF</text>
+<text x="86" y="85" font-size="12" class="mono">a.pdf  b.pdf  c.pdf</text>
+<text x="42" y="126" font-size="14">merging 3 files</text>
+<rect x="42" y="140" width="228" height="8" rx="4" fill="#33344a"/>
+<rect x="42" y="140" width="228" height="8" rx="4" fill="#9a9bfb" class="fill"/>
+<text x="42" y="180" font-size="13" font-weight="600" class="done" style="fill:#3fb950">✓ done, in this tab</text>
+<rect x="304" y="24" width="512" height="184" rx="10" fill="#181926" stroke="#2c2d40"/>
+<text x="318" y="44" font-size="12" class="muted">Elements</text><text x="392" y="44" font-size="12" class="muted">Console</text><text x="460" y="44" font-size="12" class="muted">Sources</text><text x="528" y="44" font-size="12" class="" font-weight="600">Network</text>
+<rect x="528" y="51" width="52" height="2" fill="#9a9bfb"/>
+<line x1="304" y1="53.5" x2="816" y2="53.5" stroke="#2c2d40"/>
+<circle cx="324" cy="67" r="5" fill="#ff6b6f" class="rec"/>
+<circle cx="344" cy="67" r="5" fill="none" stroke="#5d5e7a" stroke-width="1.5"/><line x1="340.5" y1="70.5" x2="347.5" y2="63.5" stroke="#5d5e7a" stroke-width="1.5"/>
+<rect x="362" y="61" width="11" height="11" rx="2" fill="none" stroke="#5d5e7a"/><text x="378" y="71" font-size="11.5" class="muted">Preserve log</text>
+<rect x="474" y="59" width="150" height="16" rx="4" fill="#11121b" stroke="#2c2d40"/><text x="482" y="71" font-size="11" class="faint">Filter</text>
+<line x1="304" y1="81.5" x2="816" y2="81.5" stroke="#2c2d40"/>
+<text x="318" y="97" font-size="11.5" font-weight="600" class="muted">Name</text>
+<text x="554" y="97" font-size="11.5" font-weight="600" class="muted">Status</text>
+<text x="624" y="97" font-size="11.5" font-weight="600" class="muted">Type</text>
+<text x="704" y="97" font-size="11.5" font-weight="600" class="muted">Size</text>
+<line x1="304" y1="103.5" x2="816" y2="103.5" stroke="#2c2d40"/>
+<text x="560" y="144" text-anchor="middle" font-size="12.5" class="faint">Recording network activity…</text>
+<text x="560" y="164" text-anchor="middle" font-size="12" class="faint">nothing to show: the PDF never leaves the tab</text>
+<line x1="304" y1="181.5" x2="816" y2="181.5" stroke="#2c2d40"/>
+<text x="318" y="199" font-size="11.5" class="mono muted"><tspan class="accent" font-weight="700">0 requests</tspan>  |  0 B transferred  |  0 B resources</text>
+</svg>

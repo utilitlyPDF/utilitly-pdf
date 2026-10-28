@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="260" viewBox="0 0 840 260" role="img" aria-labelledby="title desc">
+<title id="title">@utilitly/pdf-duplicate-pages</title>
+<desc id="desc">Two copies of page 2 slide out from behind it, turning pages 1, 2, 3 into 1, 2, 2, 2, 3. The copies share the same image.</desc>
+<style>
+text { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #e8e8f3; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
+.muted { fill: #9a9bb6; }
+.faint { fill: #5d5e7a; }
+.accent { fill: #9a9bfb; }
+.anim { transform-box: fill-box; transform-origin: center; }
+.left { transform: translateX(-120px); animation: left 6s ease-in-out infinite; }
+@keyframes left { 0%, 20% { transform: translateX(0); } 40%, 88% { transform: translateX(-120px); } 98%, 100% { transform: translateX(0); } }
+.right { transform: translateX(120px); animation: right 6s ease-in-out infinite; }
+@keyframes right { 0%, 20% { transform: translateX(0); } 40%, 88% { transform: translateX(120px); } 98%, 100% { transform: translateX(0); } }
+.copyA { animation: copyA 6s ease-in-out infinite; }
+@keyframes copyA { 0%, 20% { opacity: 0; } 30%, 88% { opacity: 1; } 96%, 100% { opacity: 0; } }
+.copyB { animation: copyB 6s ease-in-out infinite; }
+@keyframes copyB { 0%, 20% { opacity: 0; transform: translateX(-120px); } 28% { opacity: 1; transform: translateX(-120px); } 44%, 88% { opacity: 1; transform: translateX(0); } 96% { opacity: 0; transform: translateX(0); } 100% { opacity: 0; transform: translateX(-120px); } }
+.tag { animation: tag 6s ease-in-out infinite; }
+@keyframes tag { 0%, 44% { opacity: 0; } 52%, 86% { opacity: 1; } 92%, 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<rect x="0.5" y="0.5" width="839" height="259" rx="16" fill="#11121b" stroke="#2c2d40"/>
+<g class="anim copyB"><rect x="495" y="44" width="90" height="116" rx="5" fill="#1d1e2c" stroke="#2c2d40"/><rect x="505" y="54" width="38" height="7" rx="2" fill="#9a9bfb"/><text x="575" y="61" text-anchor="end" font-size="10" class="mono muted">2</text><rect x="505" y="94" width="70" height="56" rx="3" fill="#26274a"/><path d="M 511 144 l 16 -20 l 12 14 l 8 -9 l 14 15 z" fill="#9a9bfb" opacity="0.55"/><circle cx="563" cy="104" r="5" fill="#f0a032" opacity="0.8"/><rect x="505" y="72" width="57" height="4" rx="2" fill="#33344a"/><rect x="505" y="83" width="48" height="4" rx="2" fill="#33344a"/></g>
+<g class="anim copyA"><rect x="375" y="44" width="90" height="116" rx="5" fill="#1d1e2c" stroke="#2c2d40"/><rect x="385" y="54" width="38" height="7" rx="2" fill="#9a9bfb"/><text x="455" y="61" text-anchor="end" font-size="10" class="mono muted">2</text><rect x="385" y="94" width="70" height="56" rx="3" fill="#26274a"/><path d="M 391 144 l 16 -20 l 12 14 l 8 -9 l 14 15 z" fill="#9a9bfb" opacity="0.55"/><circle cx="443" cy="104" r="5" fill="#f0a032" opacity="0.8"/><rect x="385" y="72" width="57" height="4" rx="2" fill="#33344a"/><rect x="385" y="83" width="48" height="4" rx="2" fill="#33344a"/></g>
+<g class="anim left"><rect x="255" y="44" width="90" height="116" rx="5" fill="#1d1e2c" stroke="#2c2d40"/><rect x="265" y="54" width="38" height="7" rx="2" fill="#9a9bfb"/><text x="335" y="61" text-anchor="end" font-size="10" class="mono muted">1</text><rect x="265" y="72" width="57" height="4" rx="2" fill="#33344a"/><rect x="265" y="83" width="48" height="4" rx="2" fill="#33344a"/><rect x="265" y="94" width="63" height="4" rx="2" fill="#33344a"/><rect x="265" y="105" width="41" height="4" rx="2" fill="#33344a"/><rect x="265" y="116" width="53" height="4" rx="2" fill="#33344a"/></g>
+<g class="anim left"><rect x="375" y="44" width="90" height="116" rx="5" fill="#1d1e2c" stroke="#2c2d40"/><rect x="385" y="54" width="38" height="7" rx="2" fill="#9a9bfb"/><text x="455" y="61" text-anchor="end" font-size="10" class="mono muted">2</text><rect x="385" y="94" width="70" height="56" rx="3" fill="#26274a"/><path d="M 391 144 l 16 -20 l 12 14 l 8 -9 l 14 15 z" fill="#9a9bfb" opacity="0.55"/><circle cx="443" cy="104" r="5" fill="#f0a032" opacity="0.8"/><rect x="385" y="72" width="57" height="4" rx="2" fill="#33344a"/><rect x="385" y="83" width="48" height="4" rx="2" fill="#33344a"/></g>
+<g class="anim right"><rect x="495" y="44" width="90" height="116" rx="5" fill="#1d1e2c" stroke="#2c2d40"/><rect x="505" y="54" width="38" height="7" rx="2" fill="#9a9bfb"/><text x="575" y="61" text-anchor="end" font-size="10" class="mono muted">3</text><rect x="505" y="72" width="57" height="4" rx="2" fill="#33344a"/><rect x="505" y="83" width="48" height="4" rx="2" fill="#33344a"/><rect x="505" y="94" width="63" height="4" rx="2" fill="#33344a"/><rect x="505" y="105" width="41" height="4" rx="2" fill="#33344a"/><rect x="505" y="116" width="53" height="4" rx="2" fill="#33344a"/></g>
+<g class="tag"><rect x="396" y="14" width="48" height="20" rx="10" fill="#26274a"/><text x="420" y="28" text-anchor="middle" font-size="11.5" class="mono accent">copy</text><rect x="516" y="14" width="48" height="20" rx="10" fill="#26274a"/><text x="540" y="28" text-anchor="middle" font-size="11.5" class="mono accent">copy</text>
+<text x="420" y="196" text-anchor="middle" font-size="13" class="mono">1 · 2 · 2 · 2 · 3, one copy of the image</text></g>
+<text x="36" y="238" font-size="14" class="mono">await duplicatePages(pdf, '2', { copies: 2 })</text><text x="804" y="238" font-size="12.5" text-anchor="end" class="muted">copies share the page's images and fonts</text>
+</svg>

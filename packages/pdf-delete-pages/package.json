@@ -1,0 +1,43 @@
+{
+  "name": "@utilitly/pdf-delete-pages",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Delete pages from a PDF in JavaScript, by ranges like 2, 5-end. Node.js and the browser; nothing is uploaded.",
+  "keywords": [
+    "pdf",
+    "delete-pages",
+    "remove-pages",
+    "delete-pdf-pages",
+    "pdf-lib",
+    "browser",
+    "nodejs",
+    "typescript"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsdown -c ../../tsdown.config.ts",
+    "typecheck": "tsc",
+    "lint:package": "publint --strict && attw --pack ."
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  }
+}
