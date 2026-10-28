@@ -39,8 +39,9 @@ npm run playground   # try every package on your own files at http://localhost:5
 
 `npm run check` runs, in order:
 
-1. `leak-check`: fails if anything from the private site code is in the repo
-   (see `scripts/leak-check.mjs`)
+1. `leak-check`: fails on API keys and other secrets, home-folder paths and
+   `.env` files, plus the maintainer's private rules when they're on the
+   machine (see `scripts/leak-check.mjs`)
 2. `typecheck`: engine code is checked with no DOM or Node types, so it can't
    depend on either runtime
 3. `build`: ESM and CommonJS output with type definitions, via tsdown
