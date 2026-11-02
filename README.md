@@ -1,5 +1,7 @@
 # Utilitly PDF engines
 
+[![Utilitly PDF MCP server](https://mcprush.com/badge/utilitly-pdf-mcp/card.svg)](https://mcprush.com/to/utilitly-pdf-mcp?ref=badge)
+
 Six small JavaScript packages for everyday PDF jobs: merge, split and rotate, and delete, reorder or duplicate pages. Each one takes a PDF as bytes and returns new bytes, so the same code runs in Node.js and in the browser.
 
 They're the engines from the free PDF tools on [utilitly.com](https://utilitly.com), packaged for your own code.
